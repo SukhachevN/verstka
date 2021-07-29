@@ -13,11 +13,11 @@ h1,h2{
 }
 body{
     font-size: 22px;
-    line-height: 34px;
+    line-height: 1.5;
 }
 nav{
     margin-bottom: 100px;
 }
-section{
+.about_me{
     padding-top: 50px;
 }
