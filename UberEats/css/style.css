@@ -24,6 +24,9 @@ header{
     height: 20vw;
     background: #FFFFFF;
     box-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16);
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 .logo{
     width: 40vw;
@@ -58,6 +61,9 @@ header{
     display: none;
 }
 /*Search_address section*/
+.search_address{
+    margin-top: 23vw;
+}
 .search {
     display: flex;
     border-bottom: 1px solid rgba(117, 117, 117,0.3);
@@ -431,6 +437,9 @@ footer{
         margin: 0;
     }
     /*search_address*/
+    .search_address{
+        margin-top: 11vw;
+    }
     .destination{
         display: none;
     }
