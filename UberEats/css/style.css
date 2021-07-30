@@ -6,7 +6,7 @@
     font-family: 'Roboto', sans-serif;
 }
 section{
-    padding: 0vw 1vw 0vw 2vw;
+    padding: 0vw 2vw;
 }
 /*Header*/
 header{
@@ -25,7 +25,7 @@ header{
     display: flex;
     justify-content: space-between;
 }
-nav{
+.header_nav{
     width: 50%;
 }
 .header_buttons button{
@@ -34,12 +34,12 @@ nav{
     font-size: 4vw;
     font-weight: 500;
 }
-#sign{
+.sign{
     border: 1px solid #E0E0E0;
     color: #1D1D1D;
     background: white;
 }
-#register{
+.register{
     color: white;
     background: #262626;
 }
@@ -72,7 +72,6 @@ nav{
 }
 .destination{
     display: flex;
-    justify-content: space-between;
     margin-top: 4vw;
     width: 100%;
     height: 18vw;
@@ -98,8 +97,48 @@ nav{
     height: 4vw;
     margin-right: 2vw;
 }
-#destination_to{
-    width: 75%;
+.destination_to{
+    margin-left: 3vw;
+    width: 100%;
+}
+/*Restoraunts*/
+.restoraunts{
+    margin-top: 8vw;
+}
+.restoraunts h2{
+    font-weight: normal;
+    font-size: 7vw;
+}
+.restoraunt_container{
+    margin-top: 3vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.restoraunt_em{
+    flex-basis: 100%;
+    margin-bottom: 8vw;
+}
+.restoraunt_em_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20vw;
+}
+.restoraunt_em img{
+    width: 100%;
+    margin-bottom: 2vw;
+}
+.restoraunt_em_info h3{
+    font-weight: normal;
+    font-size: 5vw;
+}
+.food_type{
+    color: #626262;
+    font-size: 4.5vw;
+}
+.average_time{
+    font-size: 4vw;
 }
 /*Стиль для планшетов*/
 @media (min-width: 768px) {
@@ -107,9 +146,9 @@ nav{
     header{
         display: flex;
         flex-direction: row;
-        height: 15vw;
+        height: 10vw;
     }
-    nav{
+    .header_nav{
         width: auto;
         display: flex;
         justify-content: space-between;
@@ -145,15 +184,18 @@ nav{
         font-weight: 500;
     }
     .point_name img {
-        width: 3vw;
-        height: 3vw;
-        margin-right: 2vw;
+        width: 2.75vw;
+        height: 2.75vw;
+        margin-right: 1vw;
     }
     .header_buttons {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 35%;
+    }
+    .destination_to{
+        width: auto;
     }
     /*search_address*/
     .destination{
@@ -166,19 +208,62 @@ nav{
         width: 4vw;
     }
     .search input {
+        font-size: 2.5vw;
+    }
+    /*Restoraunts*/
+    .restoraunts{
+        margin-top: 4vw;
+    }
+    .restoraunts h2{
+        font-weight: normal;
+        font-size: 4vw;
+    }
+    .restoraunt_container{
+        margin-top: 3vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .restoraunt_em{
+        flex-basis: 49%;
+        margin-bottom: 4vw;
+    }
+    .restoraunt_em_info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 10vw;
+    }
+    .restoraunt_em img{
+        width: 100%;
+        height: 75%;
+        margin-bottom: 2vw;
+    }
+    .restoraunt_em_info h3{
+        font-weight: normal;
         font-size: 3vw;
+    }
+    .food_type{
+        color: #626262;
+        font-size: 2.5vw;
+    }
+    .average_time{
+        font-size: 2vw;
     }
   }
 
 /*Стиль для пк*/
   @media (min-width: 1280px) {
+      section{
+          padding: 0 3.5vw;
+      }
     /*Header*/
     header{
         display: flex;
         flex-direction: row;
-        height: 8vw;
+        height: 6vw;
+        padding: 0 3.5vw;
     }
-    nav{
+    .header_nav{
         width: auto;
         display: flex;
         justify-content: space-between;
@@ -196,40 +281,49 @@ nav{
     .destination_header {
         display: flex;
         align-items: center;
-        font-size: 1.5vw;
-        justify-content: space-between;
-        width: 50%;
+        font-size: 1.2vw;
+        justify-content: space-evenly;
+        width: 45%;
+    }
+    .destination_header > p{
+        color: #626262;
     }
     .point_name {
         display: flex;
         align-items: center;
-        padding: 1vw;
+        padding: 0.75vw;
         border: 1px solid #E0E0E0;
         border-radius: 2px;
     }
     .header_buttons button{
         border-radius: 2px;
         padding: 1vw;
-        font-size: 1.2vw;
+        font-size: 1.1vw;
         font-weight: 500;
     }
     .point_name img {
-        width: 2vw;
-        height: 2vw;
+        width: 1.5vw;
+        height: 1.5vw;
         margin-right: 1vw;
     }
     .header_buttons {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         width: 25%;
+        margin-right: 0vw;
     }
+    .destination_to{
+        margin: 0;
+        width: 75%;
+    }
+    
     /*search_address*/
     .destination{
         display: none;
     }
     .search {
-        margin-top: 4vw;
+        margin-top: 2vw;
     }
     .search img {
         width: 2vw;
@@ -238,6 +332,45 @@ nav{
     .search input {
         font-size: 1.5vw;
         padding: 1vw 1vw 1vw 0vw;
+    }
+    /*Restoraunts*/
+    .restoraunts{
+        margin-top: 4vw;
+    }
+    .restoraunts h2{
+        font-weight: normal;
+        font-size: 2.5vw;
+    }
+    .restoraunt_container{
+        margin-top: 2vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .restoraunt_em{
+        flex-basis: 32%;
+        margin-bottom: 1vw;
+    }
+    .restoraunt_em_info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 7vw;
+    }
+    .restoraunt_em img{
+        width: 100%;
+        height: 75%;
+        margin-bottom: 1vw;
+    }
+    .restoraunt_em_info h3{
+        font-weight: normal;
+        font-size: 2vw;
+    }
+    .food_type{
+        color: #626262;
+        font-size: 1.5vw;
+    }
+    .average_time{
+        font-size: 1.3vw;
     }
   }
 
