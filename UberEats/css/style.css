@@ -273,6 +273,105 @@ footer{
 .go_up img{
     width: 17vw;
 }
+/*restoraunt_header*/
+.restoraunt_header{
+    background: url(../img/restoraunt_header/back_phone.jpg);
+    background-size: 100%;
+    height: 50vh;
+    background-repeat: space;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.restoraunt_info{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 16px rgb(117 117 117 / 20%);
+    border-radius: 2px;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 29vw;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4vw;
+}
+.restoraunt_info h2{
+    font-size: 7vw;
+    font-weight: normal;
+}
+.average_time_restoraunt{
+    background: #262626;
+    border-radius: 16px;
+    color: white;
+    padding: 1.5vw 2vw;
+}
+.restoraunt_food_type{
+    margin-top: 13vw;
+    display: flex;
+    justify-content: center;
+}
+/*Dishes*/
+.dishes_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.dishes_container a{
+    flex-basis: 100%;
+}
+.dishes_header_wide_screen{
+    display: none;
+}
+.dish_type{
+    display: flex;
+    align-items: center;
+    margin: 8vw 0;
+    flex-direction: column;
+}
+.dish_type h3{
+    font-weight: normal;
+    font-size: 7vw;
+    margin-bottom: 4vw;
+}
+.line{
+    background: #757575;
+    height: 1px;
+    width: 20%;
+}
+.dish_em{
+    flex-basis: 100%;
+    display: flex;
+    border-bottom: 1px solid rgba(117, 117, 117,0.2);
+    justify-content: space-between;
+    margin-bottom: 5vw;
+}
+.dish_info{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.dish_em img{
+    width: 35%;
+}
+.dish_info h4{
+    font-size: 4vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 1vw;
+    font-weight: normal;
+}
+.description{
+    font-size: 3.5vw;
+    color: #626262;
+}
+.price{
+    font-size: 4vw;
+    margin: auto 0vw 2vw 0;
+    font-weight: 500;
+}
 /*Стиль для планшетов*/
 @media (min-width: 768px) {
     /*Header*/
@@ -476,6 +575,111 @@ footer{
     }
     .go_up img{
         width: 20vw;
+    }
+    /*restoraunt_header*/
+    .restoraunt_header{
+        background: url(../img/restoraunt_header/back_tablet.jpg);
+        background-size: 100%;
+        height: 36vh;
+        background-repeat: space;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .restoraunt_info{
+        width: 55%;
+        height: 50%;
+        margin-top: 0vw;
+        padding: 1vw 4vw;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .restoraunt_info h2{
+        font-size: 4.5vw;
+        font-weight: normal;
+        flex-basis: 100%;
+    }
+    .average_time_restoraunt{
+        border-radius: 16px;
+        color: white;
+        padding: 1vw;
+        justify-content: space-between;
+        display: flex;
+        flex-basis: 23%;
+        font-size: 1.5vw;
+    }
+    .restoraunt_food_type{
+        flex-basis: 46%;
+        margin-top: 0vw;
+        justify-self: flex-start;
+        font-size: 2vw;
+    }
+    /*Dishes*/
+    .dishes{
+        padding: 0;
+    }
+    .dishes_container{
+        padding: 0 3.5vw;
+    }
+    .dishes_header_wide_screen{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid rgba(117, 117, 117, 0.2);
+        padding-right: 20%;
+        padding-left: 3.5vw;
+    }
+    .dishes_header_wide_screen h3{
+        font-size: 2.5vw;
+        font-weight: normal;
+        padding: 4vw 0;
+    }
+    #prepicked_dish_type{
+        color: #327430;
+    }
+    .dish_type{
+        display: flex;
+        align-items: flex-start;
+        margin: 6vw 0;
+        flex-direction: column;
+        padding: 0 3.5vw;
+    }
+    .dish_type h3{
+        font-weight: 500;
+        font-size: 4vw;
+        margin-bottom: 0vw;
+    }
+    .line{
+        display: none;
+    }
+    .dish_em{
+        flex-basis: 100%;
+        display: flex;
+        border: 1px solid rgba(117, 117, 117,0.2);
+        justify-content: space-between;
+        margin-bottom: 5vw;
+    }
+    .dish_info{
+        padding: 2vw;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+    .dish_em img{
+        width: 35%;
+    }
+    .dish_info h4{
+        font-size: 2.5vw;
+        margin-bottom: 1vw;
+    }
+    .description{
+        font-size: 2vw;
+    }
+    .price{
+        font-size: 2.5vw;
+        margin: auto 0vw 2vw 0;
     }
   }
 
@@ -683,6 +887,74 @@ footer{
     }
     .go_up img{
         width: 20vw;
+    }
+    /*restoraunt header*/
+    .restoraunt_header{
+        background: url(../img/restoraunt_header/back_desktop.jpg);
+        background-size: 100%;
+        height: 50vh;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .restoraunt_info{
+        width: 40%;
+        height: 50%;
+    }
+    .restoraunt_info h2{
+        font-size: 3.2vw;
+    }
+    .average_time_restoraunt{
+        flex-basis: 25%;
+        font-size: 1.1vw;
+    }
+    .restoraunt_food_type{
+        font-size: 1.2vw;
+    }
+    /*Dishes*/
+    .dishes_container a{
+        flex-basis: 49%;
+    }
+    .dishes_header_wide_screen h3{
+        font-size: 1.5vw;
+        padding: 2vw 0;
+    }
+    .dish_type{
+        margin: 4vw 0;
+    }
+    .dish_type h3{
+        font-size: 2.5vw;
+    }
+    .line{
+        display: none;
+    }
+    .dish_em{
+        display: flex;
+        border: 1px solid rgba(117, 117, 117,0.2);
+        justify-content: space-between;
+        margin-bottom: 5vw;
+    }
+    .dish_info{
+        padding: 2vw;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+    .dish_em img{
+        width: 40%;
+    }
+    .dish_info h4{
+        font-size: 1.5vw;
+        margin-bottom: 1vw;
+        font-weight: normal;
+    }
+    .description{
+        font-size: 1vw;
+    }
+    .price{
+        font-size: 1.2vw;
+        margin: auto 0vw 0vw 0;
     }
   }
 
