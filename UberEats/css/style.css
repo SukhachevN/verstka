@@ -195,6 +195,7 @@ li {
   .destination_to {
       margin: 0;
       width: 75%;
+      cursor: pointer;
   }
   @media (min-width: 1280px) {
       .header{
@@ -446,9 +447,6 @@ li {
 .food_type_list {
     display: flex;
     flex-direction: row;
-}
-.food_type_em {
-    margin-right: 1vw;
 }
 .food_type_list ::before {
     content: ' • ';
@@ -920,8 +918,8 @@ li {
     justify-content: space-around;
     padding: 4vw;
 }
-.restoraunt_info h2 {
-    font-size: 7vw;
+.restoraunt_header_h2 {
+    font-size: 2rem;
     font-weight: normal;
 }
 .average_time_restoraunt {
@@ -955,8 +953,7 @@ li {
         flex-direction: row;
         justify-content: space-between;
     }
-    .restoraunt_info h2 {
-        font-size: 4.5vw;
+    .restoraunt_header_h2 {
         font-weight: normal;
         flex-basis: 100%;
     }
@@ -967,13 +964,13 @@ li {
         justify-content: space-between;
         display: flex;
         flex-basis: 23%;
-        font-size: 1.5vw;
+        font-size: 0.8rem;
     }
     .restoraunt_food_type {
         flex-basis: 46%;
         margin-top: 0vw;
         justify-self: flex-start;
-        font-size: 2vw;
+        font-size: 1rem;
     }
 }
 @media (min-width: 1124px) { 
@@ -990,15 +987,30 @@ li {
         width: 40%;
         height: 50%;
     }
-    .restoraunt_info h2 {
-        font-size: 3.2vw;
-    }
     .average_time_restoraunt {
         flex-basis: 25%;
-        font-size: 1.1vw;
     }
-    .restoraunt_food_type {
-        font-size: 1.2vw;
+}
+@media (min-width: 1280px) {
+    .restoraunt_header {
+        height: 484px;
+    }
+    .restoraunt_info {
+        width: 469px;
+        height: 242px;
+        padding: 10px 48px;
+    }
+    .cost_class {
+        margin-right: 6px;
+    }
+    .food_type_em {
+        margin-right: 4px;
+    }
+    .average_time_restoraunt {
+        padding: 12px;
+    }
+    .location {
+        margin-right: 5px;
     }
 }
 /*---------------------------------------------------------------Dishes---------------------------------------------------*/
@@ -1010,6 +1022,7 @@ li {
 }
 .dishes_container a {
     flex-basis: 100%;
+    padding-bottom: 5vw;
 }
 .dishes_header_wide_screen {
     display: none;
@@ -1020,10 +1033,9 @@ li {
     margin: 8vw 0;
     flex-direction: column;
 }
-.dish_type h3 {
+.dish_type_h3 {
     font-weight: normal;
-    font-size: 7vw;
-    margin-bottom: 4vw;
+    font-size: 1.75rem;
 }
 .line {
     background: #757575;
@@ -1035,18 +1047,17 @@ li {
     display: flex;
     border-bottom: 1px solid rgba(117, 117, 117,0.2);
     justify-content: space-between;
-    margin-bottom: 5vw;
 }
 .dish_info {
     width: 60%;
     display: flex;
     flex-direction: column;
 }
-.dish_em img {
+.dish_img {
     width: 35%;
 }
-.dish_info h4 {
-    font-size: 4vw;
+.dish_name {
+    font-size: 1.01rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -1054,11 +1065,11 @@ li {
     font-weight: normal;
 }
 .description {
-    font-size: 3.5vw;
+    font-size: 0.8rem;
     color: #626262;
 }
 .price {
-    font-size: 4vw;
+    font-size: 1rem;
     margin: auto 0vw 2vw 0;
     font-weight: 500;
 }
@@ -1077,9 +1088,10 @@ li {
         border-bottom: 1px solid rgba(117, 117, 117, 0.2);
         padding-right: 20%;
         padding-left: 3.5vw;
+        overflow-x: auto;
     }
-    .dishes_header_wide_screen h3 {
-        font-size: 2.5vw;
+    .dish_wide_h3 {
+        font-size: 1.1rem;
         font-weight: normal;
         padding: 4vw 0;
         cursor: pointer;
@@ -1094,11 +1106,6 @@ li {
         flex-direction: column;
         padding: 0 3.5vw;
     }
-    .dish_type h3 {
-        font-weight: 500;
-        font-size: 4vw;
-        margin-bottom: 0vw;
-    }
     .line {
         display: none;
     }
@@ -1107,7 +1114,6 @@ li {
         display: flex;
         border: 1px solid rgba(117, 117, 117,0.2);
         justify-content: space-between;
-        margin-bottom: 5vw;
     }
     .dish_info {
         padding: 2vw;
@@ -1115,33 +1121,28 @@ li {
         display: flex;
         flex-direction: column;
     }
-    .dish_em img {
+    .dish_img {
         width: 35%;
     }
-    .dish_info h4 {
-        font-size: 2.5vw;
+    .dish_name {
         margin-bottom: 1vw;
     }
-    .description {
-        font-size: 2vw;
-    }
     .price {
-        font-size: 2.5vw;
         margin: auto 0vw 2vw 0;
     }
   }
   @media (min-width: 1124px)  { 
     .dishes_container a {
         flex-basis: 49%;
+        padding-bottom: 3vw;
     }
-    .dishes_header_wide_screen h3 {
-        font-size: 1.5vw;
+    .dish_wide_h3 {
         padding: 2vw 0;
     }
     .dish_type {
         margin: 4vw 0;
     }
-    .dish_type h3 {
+    .dish_h3 {
         font-size: 2.5vw;
     }
     .line {
@@ -1151,7 +1152,6 @@ li {
         display: flex;
         border: 1px solid rgba(117, 117, 117,0.2);
         justify-content: space-between;
-        margin-bottom: 5vw;
     }
     .dish_info {
         padding: 2vw;
@@ -1159,20 +1159,26 @@ li {
         display: flex;
         flex-direction: column;
     }
-    .dish_em img {
+    .dish_img {
         width: 40%;
     }
-    .dish_info h4 {
-        font-size: 1.5vw;
+    .dish_name {
         margin-bottom: 1vw;
         font-weight: normal;
     }
-    .description {
-        font-size: 1vw;
-    }
     .price {
-        font-size: 1.2vw;
         margin: auto 0vw 0vw 0;
+    }
+  }
+  @media (min-width: 1280px)  { 
+    .dish_wide_h3 {
+        padding: 20px 0;
+    }
+    .dish_type {
+        margin: 40px 0;
+    }
+    .dishes_container a {
+        padding-bottom: 35px;
     }
   }
 
