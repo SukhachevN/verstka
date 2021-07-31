@@ -5,241 +5,248 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uber Eats</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <main>
-        <header id="header">
-            <img src="img/header/logo.svg" alt="" class="logo">
+    <header class="header">
+        <div class="container header_container">
             <nav class="header_nav">
+                <img src="img/header/logo.svg" alt="логотип" class="logo">
                 <div class="destination_header">
-                    <div class="point_name">ASAP</div>
-                    <p>to</p>
+                    <button class="point_name destination_to">ASAP</button>
+                    <p class="destination-p">to</p>
                     <div class="point_name destination_to">
-                        <img src="img/search_address/location.svg" alt="">
-                        <p>ul. Bolshaya Dmitrovka,22 </p>
+                        <img src="img/search_address/location.svg" alt="иконка локации" class="location">
+                        <input type="search" id="search_address" name="search_address" class="search_input">
                     </div>
                 </div>
                 <div class="header_buttons">
                     <button class="sign">Sign In</button>
                     <button class="register">Register</button>
-                    <a href=""><img src="img/header/basket.svg" alt="" class="basket"></a>
+                    <button class="card_button"><img src="img/header/basket.svg" alt="иконка корзины" class="basket"></button>
                 </div>
             </nav>
-        </header>
-        <section class="search_address">
-            <nav>
-                <div class="search">
-                    <img src="img/search_address/search.svg" alt="">
-                    <input type="search" id="search" name="search" placeholder="Search for restaurant or cuisine">
-                </div>
-                <div class="destination">
-                    <div class="destination_point">
-                        <p>When</p>
-                        <div class="point_name">ASAP</div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="search_address">
+                <nav>
+                    <div class="search">
+                        <img src="img/search_address/search.svg" alt="иконка увеличительного стекла" class="search_img">
+                        <input type="search" id="search" name="search" placeholder="Search for restaurant or cuisine" class="search_input">
                     </div>
-                    <div class="destination_point destination_to">
-                        <p>To</p>
-                        <div class="point_name">
-                            <img src="img/search_address/location.svg" alt="">
-                            <p>ul. Bolshaya Dmitrovka,22 </p>
+                    <div class="destination">
+                        <div class="destination_point">
+                            <p class="destination-p">When</p>
+                            <button class="point_name">ASAP</button>
+                        </div>
+                        <div class="destination_point destination_to">
+                            <p class="destination-p">To</p>
+                            <div class="point_name">
+                                <img src="img/search_address/location.svg" alt="иконка локации class="location">
+                                <input type="search" id="search_address" name="search_address" class="search_input">
+                            </div>
                         </div>
                     </div>
-                </div>
-            </nav>
-        </section>
-        <section class="restoraunts">
-            <h2>Moscow Restaurants</h2>
-            <div class="restoraunt_container">
-                <div class="restoraunt_em">
-                    <a href="">
-                        <img src="img/restoraunts/macdonalds.jpg" alt="">
+                </nav>
+            </section>
+            <section class="restoraunts">
+                <h2 class="restoraunts_h2">Moscow Restaurants</h2>
+                <div class="restoraunt_container">
+                    <div class="restoraunt_em">
+                        <a href="">
+                            <img src="img/restoraunts/macdonalds.jpg" alt="фотография ресторана" class="restoraunts_img">
+                            <div class="restoraunt_em_info">
+                                <h3 class="restoraunts_h3">Макдоналдс — Газетный</h3>
+                                <div class="food_type">
+                                    <p class="cost_class">₽₽</p>
+                                    <ul class="food_type_list">
+                                        <li class="food_type_em">Бургеры</li>
+                                    </ul>
+                                </div>
+                                <p class="average_time"><span>25</span>  - <span>35</span> Min</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="restoraunt_em">
+                        <a href="">
+                            <img src="img/restoraunts/DimSum.jpg" alt="фотография ресторана" class="restoraunts_img">
                         <div class="restoraunt_em_info">
-                            <h3>Макдоналдс — Газетный</h3>
+                            <h3 class="restoraunts_h3">DimSum & Co — ЦДМ</h3>
+                            <div class="food_type">
+                                <p class="cost_class">₽</p>
+                                <ul class="food_type_list">
+                                    <li class="food_type_em">Японская</li>
+                                    <li class="food_type_em">Китайская</li>
+                                    <li class="food_type_em">Азиатская</li>
+                                </ul>
+                            </div>
+                            <p class="average_time"><span>40</span>  - <span>50</span> Min</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="restoraunt_em">
+                        <a href="">
+                            <img src="img/restoraunts/dvijok.jpg" alt="фотография ресторана" class="restoraunts_img">
+                        <div class="restoraunt_em_info">
+                            <h3 class="restoraunts_h3">ДвижОК — Манежная</h3>
+                            <div class="food_type">
+                                <p class="cost_class">₽</p>
+                                <ul class="food_type_list">
+                                    <li class="food_type_em">Американская</li>
+                                    <li class="food_type_em">Европейская</li>
+                                </ul>
+                            </div>
+                            <p class="average_time"><span>35</span>  - <span>45</span> Min</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="restoraunt_em">
+                        <a href="">
+                            <img src="img/restoraunts/nha.jpg" alt="фотография ресторана" class="restoraunts_img">
+                        <div class="restoraunt_em_info">
+                            <h3 class="restoraunts_h3">НЯ — NHA</h3>
                             <div class="food_type">
                                 <p class="cost_class">₽₽</p>
-                                <ul>
-                                    <li>Бургеры</li>
+                                <ul class="food_type_list">
+                                    <li class="food_type_em">Вьетнамская</li>
+                                </ul>
+                            </div>
+                            <p class="average_time"><span>30</span>  - <span>40</span> Min</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="restoraunt_em">
+                        <a href="">
+                            <img src="img/restoraunts/dzi.jpg" alt="фотография ресторана" class="restoraunts_img">
+                        <div class="restoraunt_em_info">
+                            <h3 class="restoraunts_h3">Точка Дзы — Цветной</h3>
+                            <div class="food_type">
+                                <p class="cost_class">₽₽</p>
+                                <ul class="food_type_list">
+                                    <li class="food_type_em">Вьетнамская</li>
+                                </ul>
+                             </div>
+                            <p class="average_time"><span>40</span>  - <span>50</span> Min</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="restoraunt_em">
+                        <a href="">
+                            <img src="img/restoraunts/cinabon.jpg" alt="фотография ресторана" class="restoraunts_img">
+                        <div class="restoraunt_em_info">
+                            <h3 class="restoraunts_h3">Cinnabon</h3>
+                            <div class="food_type">
+                                <p class="cost_class">₽</p>
+                                <ul class="food_type_list">
+                                    <li class="food_type_em">Выпечка</li>
+                                    <li class="food_type_em">Десерты</li>
+                                    <li class="food_type_em">Капкейки</li>
                                 </ul>
                             </div>
                             <p class="average_time"><span>25</span>  - <span>35</span> Min</p>
                         </div>
-                    </a>
-                </div>
-                <div class="restoraunt_em">
-                    <a href="">
-                        <img src="img/restoraunts/DimSum.jpg" alt="">
-                    <div class="restoraunt_em_info">
-                        <h3>DimSum & Co — ЦДМ</h3>
-                        <div class="food_type">
-                            <p class="cost_class">₽</p>
-                            <ul>
-                                <li>Японская</li>
-                                <li>Китайская</li>
-                                <li>Азиатская</li>
-                            </ul>
-                        </div>
-                        <p class="average_time"><span>40</span>  - <span>50</span> Min</p>
+                        </a>
                     </div>
-                    </a>
-                </div>
-                <div class="restoraunt_em">
-                    <a href="">
-                        <img src="img/restoraunts/dvijok.jpg" alt="">
-                    <div class="restoraunt_em_info">
-                        <h3>ДвижОК — Манежная</h3>
-                        <div class="food_type">
-                            <p class="cost_class">₽</p>
-                            <ul>
-                                <li>Американская</li>
-                                <li>Европейская</li>
-                            </ul>
-                        </div>
-                        <p class="average_time"><span>35</span>  - <span>45</span> Min</p>
+                    <div class="restoraunt_em">
+                        <a href="">
+                            <img src="img/restoraunts/pizzelove.jpg" alt="фотография ресторана" class="restoraunts_img">
+                            <div class="restoraunt_em_info">
+                                <h3 class="restoraunts_h3">PIZZELOVE</h3>
+                                <div class="food_type">
+                                    <p class="cost_class">₽₽</p>
+                                    <ul class="food_type_list">
+                                        <li class="food_type_em">Пицца</li>
+                                    </ul>
+                                </div>
+                                <p class="average_time"><span>15</span>  - <span>25</span> Min</p>
+                            </div>
+                        </a>
                     </div>
-                    </a>
-                </div>
-                <div class="restoraunt_em">
-                    <a href="">
-                        <img src="img/restoraunts/nha.jpg" alt="">
-                    <div class="restoraunt_em_info">
-                        <h3>НЯ — NHA</h3>
-                        <div class="food_type">
-                            <p class="cost_class">₽₽</p>
-                            <ul>
-                                <li>Вьетнамская</li>
-                            </ul>
-                        </div>
-                        <p class="average_time"><span>30</span>  - <span>40</span> Min</p>
-                    </div>
-                    </a>
-                </div>
-                <div class="restoraunt_em">
-                    <a href="">
-                        <img src="img/restoraunts/dzi.jpg" alt="">
-                    <div class="restoraunt_em_info">
-                        <h3>Точка Дзы — Цветной</h3>
-                        <div class="food_type">
-                            <p class="cost_class">₽₽</p>
-                            <ul>
-                                <li>Вьетнамская</li>
-                            </ul>
-                         </div>
-                        <p class="average_time"><span>40</span>  - <span>50</span> Min</p>
-                    </div>
-                    </a>
-                </div>
-                <div class="restoraunt_em">
-                    <a href="">
-                        <img src="img/restoraunts/cinabon.jpg" alt="">
-                    <div class="restoraunt_em_info">
-                        <h3>Cinnabon</h3>
-                        <div class="food_type">
-                            <p class="cost_class">₽</p>
-                            <ul>
-                                <li>Выпечка</li>
-                                <li>Десерты</li>
-                                <li>Капкейки</li>
-                            </ul>
-                        </div>
-                        <p class="average_time"><span>25</span>  - <span>35</span> Min</p>
-                    </div>
-                    </a>
-                </div>
-                <div class="restoraunt_em">
-                    <a href="">
-                        <img src="img/restoraunts/pizzelove.jpg" alt="">
+                    <div class="restoraunt_em">
+                        <a href="">
+                            <img src="img/restoraunts/zu.jpg" alt="фотография ресторана" class="restoraunts_img">
                         <div class="restoraunt_em_info">
-                            <h3>PIZZELOVE</h3>
+                            <h3 class="restoraunts_h3">Zю кафе — Тверская</h3>
                             <div class="food_type">
                                 <p class="cost_class">₽₽</p>
-                                <ul>
-                                    <li>Пицца</li>
+                                <ul class="food_type_list">
+                                    <li class="food_type_em">Японская</li>
                                 </ul>
                             </div>
-                            <p class="average_time"><span>15</span>  - <span>25</span> Min</p>
+                            <p class="average_time"><span>25</span>  - <span>35</span> Min</p>
                         </div>
-                    </a>
-                </div>
-                <div class="restoraunt_em">
-                    <a href="">
-                        <img src="img/restoraunts/zu.jpg" alt="">
-                    <div class="restoraunt_em_info">
-                        <h3>Zю кафе — Тверская</h3>
-                        <div class="food_type">
-                            <p class="cost_class">₽₽</p>
-                            <ul>
-                                <li>Японская</li>
-                            </ul>
-                        </div>
-                        <p class="average_time"><span>25</span>  - <span>35</span> Min</p>
+                        </a>
                     </div>
-                    </a>
-                </div>
-                <div class="restoraunt_em">
-                    <a href="">
-                        <img src="img/restoraunts/bq.jpg" alt="">
-                    <div class="restoraunt_em_info">
-                        <h3>Bar BQ Cafe — Манежная</h3>
-                        <div class="food_type">
-                            <p class="cost_class">₽₽₽</p>
-                            <ul>
-                                <li>Европейская</li>
-                            </ul>
+                    <div class="restoraunt_em">
+                        <a href="">
+                            <img src="img/restoraunts/bq.jpg" alt="фотография ресторана" class="restoraunts_img">
+                        <div class="restoraunt_em_info">
+                            <h3 class="restoraunts_h3">Bar BQ Cafe — Манежная</h3>
+                            <div class="food_type">
+                                <p class="cost_class">₽₽₽</p>
+                                <ul class="food_type_list">
+                                    <li class="food_type_em">Европейская</li>
+                                </ul>
+                            </div>
+                            <p class="average_time"><span>30</span>  - <span>40</span> Min</p>
                         </div>
-                        <p class="average_time"><span>30</span>  - <span>40</span> Min</p>
+                        </a>
                     </div>
-                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <img src="img/footer/white-logo.svg" alt="логотип" class="footer_logo">
+        <nav>
+            <div class="footer_nav">
+                <div class="footer_em">
+                    <div class="switch_language">
+                        <img src="img/footer/world.svg" alt="иконка планеты" class="switch_language_img">
+                        <p class="language">ENGLISH</p>
+                        <img src="img/footer/arrow.svg" alt="стрелка" class="switch_language_img">
+                    </div>
+                    <div class="social">
+                        <h3 class="hashtag"><span>#</span>UberEats</h3>
+                        <div class="social_networks">
+                            <a href=""><img src="img/footer/facebook.svg" alt="facebook" class="social_network"></a>
+                            <a href=""><img src="img/footer/twitter.svg" alt="twitter"  class="social_network"></a>
+                            <a href=""><img src="img/footer/instagram.svg" alt="instagram"  class="social_network"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_em">
+                    <ul class="footer_menu">
+                        <li class="footer_menu_em"><a href="">About UberEats</a></li>
+                        <li class="footer_menu_em"><a href="">Become a Delivery Partner</a></li>
+                        <li class="footer_menu_em"><a href="">Become a Restaurant Partner</a></li>
+                    </ul>
+                </div>
+                <div class="footer_em">
+                    <ul class="footer_menu second_footer_menu">
+                        <li class="footer_menu_em"><a href="">See all cities</a></li>
+                        <li class="footer_menu_em"><a href="">Pricing</a></li>
+                        <li class="footer_menu_em"><a href="">Help</a></li>
+                        <li class="footer_menu_em"><a href="">FAQs</a></li>
+                    </ul>
                 </div>
             </div>
-        </section>
-        <footer>
-            <img src="img/footer/white-logo.svg" alt="" class="footer_logo">
-            <nav>
-                <div class="footer_nav">
-                    <div class="footer_em">
-                        <div class="switch_language">
-                            <img src="img/footer/world.svg" alt="">
-                            <p>ENGLISH</p>
-                            <img src="img/footer/arrow.svg" alt="">
-                        </div>
-                        <div class="social">
-                            <h3><span>#</span>UberEats</h3>
-                            <div class="social_networks">
-                                <img src="img/footer/facebook.svg" alt="">
-                                <img src="img/footer/twitter.svg" alt="">
-                                <img src="img/footer/instagram.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer_em">
-                        <ul class="footer_menu">
-                            <li><a href="">About UberEats</a></li>
-                            <li><a href="">Become a Delivery Partner</a></li>
-                            <li><a href="">Become a Restaurant Partner</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer_em">
-                        <ul class="footer_menu second_footer_menu">
-                            <li><a href="">See all cities</a></li>
-                            <li><a href="">Pricing</a></li>
-                            <li><a href="">Help</a></li>
-                            <li><a href="">FAQs</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="downloads">
-                    <a href=""><img src="img/footer/app_store.svg" alt=""></a>
-                    <a href=""><img src="img/footer/google_play.svg" alt=""></a>
-                </div>
-                <div class="copyrights">
-                    <p>© 2017 Uber Technologies Inc.</p>
-                    <p><a href="">Privacy</a></p>
-                    <p><a href="">Terms</a></p>
-                </div>
-                <a href="#header" class="go_up"><img src="img/footer/btn-up.svg" alt=""></a>
-            </nav>
-        </footer>
-    </main>
+            <div class="downloads">
+                <a href=""><img src="img/footer/app_store.svg" alt="app store" class="download_service"></a>
+                <a href=""><img src="img/footer/google_play.svg" alt="google play"  class="download_service"></a>
+            </div>
+            <div class="copyrights">
+                <p class="copyrights_p">© 2017 Uber Technologies Inc.</p>
+                <p class="copyrights_p"><a href="">Privacy</a></p>
+                <p class="copyrights_p"><a href="">Terms</a></p>
+            </div>
+            <!--<button class="go_up"><img src="img/footer/btn-up.svg" alt="" class="go_up_img"></button>-->
+        </nav>
+        </div>
+    </footer>
 </body>
 </html>
