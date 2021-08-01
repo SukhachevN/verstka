@@ -666,15 +666,17 @@ li {
     color: white;
 }
 .go_up {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-self: center;
     align-self: center;
     right: 0;
-    margin: -20vw 3vw 0vw 0vw;
-}
-.go_up_img {
-    width: 17vw;
+    bottom: 0;
+    border: none;
+    background: none;
+    margin: 0vw 3vw 3vw 0vw;
+    display: none;
+    cursor: pointer;
 }
 @media (min-width: 768px) {
     .footer {
@@ -756,15 +758,10 @@ li {
     }
     .go_up {
         width: 10vw;
-        position: absolute;
-        display: flex;
-        justify-self: center;
-        align-self: center;
-        right: 0;
-        margin-top: -16vw;
+        margin: 0vw 2vw 3vw 0vw;
     }
     .go_up_img {
-        width: 20vw;
+        width: 9vw;
     }
 }
 @media (min-width: 1124px) { 
@@ -842,17 +839,13 @@ li {
         width: 33%;
     }
     .go_up {
-        width: 10vw;
-        position: absolute;
-        display: flex;
-        justify-self: center;
-        align-self: center;
-        right: 0;
-        margin-top: -12vw;
+        width: 6vw;
+        margin: 0vw 2vw 1vw 0vw;
     }
     .go_up_img {
-        width: 20vw;
+        width: 5vw;
     }
+
 }
 @media (min-width: 1280px) { 
     .footer_logo {
@@ -893,6 +886,13 @@ li {
     }
     .copyrights {
         font-size: 1rem;
+    }
+    .go_up {
+        width: 76px;
+        margin: 0vw 25px 15px 0vw;
+    }
+    .go_up_img {
+        width: 65px;
     }
 }
 /*-------------------------------------------restoraunt_header--------------------------------------------------------*/
@@ -1036,6 +1036,7 @@ li {
 .dish_type_h3 {
     font-weight: normal;
     font-size: 1.75rem;
+    padding-bottom: 3vw;
 }
 .line {
     background: #757575;
@@ -1075,6 +1076,9 @@ li {
 }
 /*Стиль для планшетов*/
 @media (min-width: 768px) {
+    .dish_type_h3 {
+        padding-bottom: 0vw;
+    }
     .dishes {
         padding: 0;
     }
