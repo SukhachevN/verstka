@@ -1,15 +1,15 @@
 $(document).on("scroll", window, function () {
     if ($(window).scrollTop()>1) 
     {
-        $(".go_up").css("display", "block")
+        $(".go-up").css("display", "block")
     }
     else
     {
-        $(".go_up").css("display", "none")
+        $(".go-up").css("display", "none")
     }
 });
 
-$('.go_up').click(function(){
+$('.go-up').click(function(){
     $("html, body").animate({ scrollTop: 0 }, 500);
     return false;
 });
