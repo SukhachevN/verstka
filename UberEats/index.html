@@ -7,9 +7,8 @@
     <title>Uber Eats</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
-<body>
+<body id="body">
     <header class="header">
         <div class="container header_container">
             <nav class="header__nav">
@@ -17,7 +16,7 @@
                 <div class="header__destination">
                     <button class="point-name destination-to">ASAP</button>
                     <p class="destination-p">to</p>
-                    <div class="point-name destination-to">
+                    <div class="point-name destination-to point-name_with-address-input">
                         <img src="img/search_address/location.svg" alt="иконка локации" class="location">
                         <input type="search" id="search_address" name="search_address" class="header__search-input">
                     </div>
@@ -31,9 +30,7 @@
         </div>
     </header>
     <main>
-        <nav>
-            <button class="go-up"><img src="img/footer/btn-up.svg" alt="" class="go-up_img"></button>
-        </nav>
+        <a href="#body" class="go-up"><img src="img/footer/btn-up.svg" alt="кнопка прокрутки вверх" class="go-up__img"></a>
         <div class="container">
             <section class="search_address">
                 <nav>
@@ -48,7 +45,7 @@
                         </div>
                         <div class="destination__point destination-to">
                             <p class="destination-p">To</p>
-                            <div class="point-name">
+                            <div class="point-name point-name_with-address-input">
                                 <img src="img/search_address/location.svg" alt="иконка локации" class="location">
                                 <input type="search" id="search_address" name="search_address" class="header__search-input">
                             </div>

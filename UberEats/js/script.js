@@ -1,23 +1,24 @@
-$(document).on("scroll", window, function () {
-    if ($(window).scrollTop()>1) 
-    {
-        $(".go-up").css("display", "block")
+window.onscroll = function() {
+    if (window.pageYOffset > 1) {
+        document.getElementsByClassName("go-up")[0].style.display='block';
     }
-    else
-    {
-        $(".go-up").css("display", "none")
+    else{
+        document.getElementsByClassName("go-up")[0].style.display='none';
     }
-});
+};
 
-$('.go-up').click(function(){
-    $("html, body").animate({ scrollTop: 0 }, 500);
-    return false;
-});
+document.querySelectorAll('a[href^="#"').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        let href = this.getAttribute('href').substring(1);
+        const scrollTarget = document.getElementById(href);
+        const topOffset = document.querySelector('.header').offsetHeight;
+        const elementPosition = scrollTarget.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - topOffset;
 
-$('a[href^="#"').on('click', function() {
-    let href = $(this).attr('href');
-    $('html, body').animate({
-        scrollTop: $(href).offset().top - $('.header').width()/3
+        window.scrollBy({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
     });
-    return false;
 });

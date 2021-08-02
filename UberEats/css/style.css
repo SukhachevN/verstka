@@ -20,6 +20,9 @@ li {
     margin: 0 auto;
     width: 100%;
 }
+html {
+    scroll-behavior: smooth;
+  }
 /*-----------------------------------------------------Header------------------------------------------------------------------------------*/
 .header {
     display: flex;
@@ -38,9 +41,9 @@ li {
 }
 .header__buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     cursor: pointer;
-    width: 50%;
+    width: 55%;
 }
 .header__nav {
     width: 100%;
@@ -70,6 +73,12 @@ li {
     border: none;
     background: transparent;
     cursor: pointer;
+}
+@media (max-width: 300px) { /*Исправление кнопок на очень узких экранах*/
+    .sign, .register {
+        padding: 3vw;
+        font-size: 0.9rem;
+    }
 }
 @media (min-width: 768px) {
     .header {
@@ -223,10 +232,13 @@ li {
     .header__buttons {
         width: 307px;
         margin-right: 0vw;
-        padding-left: 4vw;
+        padding-left: 80px;
     }
     .sign, .register {
         padding: 12px;
+    }
+    section {
+        padding: 0 50px;
     }
   }
 }
@@ -262,7 +274,7 @@ li {
 }
 .destination-p {
     color: #626262;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding-bottom: 4vw;
 }
 .destination__point {
@@ -273,14 +285,15 @@ li {
 .point-name {
     display: flex;
     align-items: center;
-    padding: 2.75vw;
+    padding: 5vw 2.75vw;
     border: 1px solid #E0E0E0;
     border-radius: 2px;
     background: transparent;
+    height: 16vw;
 }
 .location {
-    width: 3.75vw;
-    height: 3.75vw;
+    width: 4.75vw;
+    height: 4.75vw;
     margin-right: 1vw;
 }
 .destination-to {
@@ -290,12 +303,17 @@ li {
 .search_input , .header__search-input {
     border: none;
     width: 100%;
+    height: 15vw;
+    font-size: 1.25rem;
 }
 .search_input:focus {
     outline: none;
 }
 .header__search-input:focus {
     outline: none;
+}
+.point-name_with-address-input {
+    padding: 0 2.75vw;
 }
 @media (min-width: 768px) {
     .search_address  {
@@ -356,6 +374,7 @@ li {
         margin: 0;
         padding: 1.5vw;
         font-size: 0.9rem;
+        height: 6vw;
     }
     .destination-p {
         font-size: 1rem;
@@ -366,9 +385,10 @@ li {
         height: 2.5vw;
         margin-right: 1vw;
     }
-    .search_input {
-        font-size: 1.1rem;
+    .search_input, .header__search-input {
         background: none;
+        height: 5vw;
+        font-size: 1.25rem;
     }
 }
 @media (min-width: 1124px) { 
@@ -559,6 +579,7 @@ li {
     }
     .search_img {
         width: 26px;
+        margin-right: 10px;
     }
     .destination-to {
         height: 40px;
@@ -566,12 +587,17 @@ li {
     }
     .header__search-input {
         width: auto;
+        font-size: 1rem;
+    }
+    .search_input {
+        padding: 10px;
+        height: 70px;
     }
 }
 /*------------------------------------------------Footer------------------------------------------------------------*/
 .footer {
     background: #262626;
-    margin-top: 5vw;
+    margin-top: 50px;
     padding: 0 2vw;
 }
 .footer__logo {
@@ -611,7 +637,7 @@ li {
 }
 .hashtag {
     color: #FFFFFF;
-    font-size: 6vw;
+    font-size: 1.5rem;
     font-weight: normal;
     margin-bottom: 2vw;
 }
@@ -668,7 +694,6 @@ li {
 }
 .go-up {
     position: fixed;
-    display: flex;
     justify-self: center;
     align-self: center;
     right: 0;
@@ -681,8 +706,7 @@ li {
 }
 @media (min-width: 768px) {
     .footer {
-        background: #262626;
-        margin-top: 5vw;
+        margin-top: 50px;
         padding: 0 2vw;
     }
     .footer__logo {
@@ -712,7 +736,6 @@ li {
     }
     .hashtag {
         color: #FFFFFF;
-        font-size: 3vw;
         font-weight: normal;
         margin-bottom: 2vw;
     }
@@ -761,7 +784,7 @@ li {
         width: 10vw;
         margin: 0vw 2vw 3vw 0vw;
     }
-    .go-up_img {
+    .go-up__img {
         width: 9vw;
     }
 }
@@ -770,8 +793,6 @@ li {
         margin-left: -11vw;
     }
     .footer {
-        background: #262626;
-        margin-top: 5vw;
         padding: 0 2vw;
     }
     .footer__logo {
@@ -800,7 +821,6 @@ li {
         margin-left: -11vw;
     }
     .hashtag {
-        font-size: 2vw;
         margin-bottom: 1vw;
     }
     .social-network {
@@ -843,12 +863,15 @@ li {
         width: 6vw;
         margin: 0vw 2vw 1vw 0vw;
     }
-    .go-up_img {
+    .go-up__img {
         width: 5vw;
     }
 
 }
 @media (min-width: 1280px) { 
+    .footer {
+        padding: 0 30px;
+    }
     .footer__logo {
         margin: 45px 0;
         width: 258px;
@@ -892,9 +915,10 @@ li {
         width: 76px;
         margin: 0vw 25px 15px 0vw;
     }
-    .go-up_img {
+    .go-up__img {
         width: 65px;
     }
+
 }
 /*-------------------------------------------restoraunt_header--------------------------------------------------------*/
 .restoraunt-header {
