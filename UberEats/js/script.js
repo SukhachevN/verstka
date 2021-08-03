@@ -1,18 +1,15 @@
 window.onscroll = function() {
-    if (window.pageYOffset > 1) {
-        document.getElementsByClassName("go-up")[0].style.display='block';
-    }
-    else{
-        document.getElementsByClassName("go-up")[0].style.display='none';
-    }
+    const needToShowButton = window.pageYOffset > 1
+    document.querySelector('#goUp').style.display = needToShowButton ? 'block' : 'none'
 };
 
-document.querySelectorAll('a[href^="#"').forEach(link => {
+const header = document.querySelector('.header')
+document.querySelectorAll('.dish-type__link, #goUp').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
         let href = this.getAttribute('href').substring(1);
         const scrollTarget = document.getElementById(href);
-        const topOffset = document.querySelector('.header').offsetHeight;
+        const topOffset = header.offsetHeight;
         const elementPosition = scrollTarget.getBoundingClientRect().top;
         const offsetPosition = elementPosition - topOffset;
 
