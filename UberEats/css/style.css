@@ -1,10 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-:root {
-    --small-width: 300px;
-    --tablet-width: 768px;
-    --desktop-width: 1124px;
-    --limit-width: 1280px;
-  }
 * {
     box-sizing: border-box;
     padding: 0;
