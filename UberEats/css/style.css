@@ -47,7 +47,8 @@ html {
 }
 .header__buttons {
     display: flex;
-    justify-content: space-around;
+    gap: 10px;
+    justify-content: flex-end;
     cursor: pointer;
     width: 55%;
 }
@@ -59,7 +60,7 @@ html {
 .sign, 
 .register {
     border-radius: 2px;
-    padding: 15px;
+    padding: 10px;
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
@@ -92,6 +93,9 @@ html {
     .header{
         height: 60px;
     }
+    .header__buttons {
+        gap: 5px;
+    }
 }
 @media (min-width: 768px) {
     .header {
@@ -117,7 +121,6 @@ html {
         display: flex;
         align-items: center;
         font-size: 1rem;
-        justify-content: space-between;
         width: 50%;
         padding-right: 90px;
     }
@@ -129,29 +132,25 @@ html {
         border-radius: 2px;
         background: transparent;
     }
-    .sign , .register {
+    .sign , 
+    .register {
         border-radius: 2px;
         padding: 1.5vw;
         font-size: 1rem;
         font-weight: 500;
     }
-    .location {
-        width: 2.5vw;
-        height: 2.5vw;
-        margin-right: 1vw;
-    }
     .header__buttons  {
         display: flex;
-        justify-content: space-between;
+        gap: 15px;
         align-items: center;
-        width: 27%;
+        width: 30%;
     }
     .card_button {
         display: block;
     }
     .destination-p {
         font-size: 0.8rem;
-        padding-bottom: 0vw;
+        padding-bottom: 0;
     }
 }
 @media (min-width: 1124px) {
@@ -202,11 +201,9 @@ html {
   }
   .header__buttons  {
       display: flex;
-      justify-content: space-between;
+      gap: 20px;
       align-items: center;
       width: 25%;
-      margin-right: 0vw;
-      padding-left: 4vw;
   }
   .destination-to {
       margin: 0;
@@ -238,10 +235,9 @@ html {
   }
   .header__buttons {
       width: 307px;
-      margin-right: 0vw;
-      padding-left: 80px;
   }
-  .sign, .register {
+  .sign, 
+  .register {
       padding: 12px;
   }
   section {
